@@ -3,6 +3,7 @@
  * faixas numeradas em tipografia de letreiro, iron-beam separando,
  * player Spotify da faixa-chave "MESMO SEM SINAL".
  */
+import { SignalPlayer } from "@/components/SignalPlayer";
 import { ALBUM_TRACKLIST } from "@/lib/bandData";
 
 export function Setlist() {
@@ -57,20 +58,9 @@ export function Setlist() {
             </ol>
           </div>
 
-          {/* Coluna do player + faixa completa */}
+          {/* Coluna do player personalizado + faixa completa */}
           <div className="lg:sticky lg:top-28 space-y-8">
-            <div className="reveal border border-[var(--gold)]/40 bg-card p-2">
-              <iframe
-                src="https://open.spotify.com/embed/track/7CCthOC76Vihl2aRICkFdI?utm_source=generator&theme=0"
-                width="100%"
-                height="152"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title="Player: MESMO SEM SINAL"
-              />
-            </div>
+            <SignalPlayer />
 
             <div className="reveal">
               <p className="tech-meta text-muted-foreground mb-4">

@@ -18,6 +18,7 @@ export function Header() {
     { label: "A Banda", href: "#banda" },
     { label: "Discografia", href: "#discografia" },
     { label: "Setlist", href: "#setlist" },
+    { label: "Letras", href: "/letras" },
     { label: "Novidades", href: "#novidades" },
   ];
 

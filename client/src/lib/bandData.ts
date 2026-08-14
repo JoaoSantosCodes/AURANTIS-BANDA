@@ -29,6 +29,17 @@ export interface Track {
   number?: number;
 }
 
+export interface LyricMovement {
+  title: string;
+  description: string;
+}
+
+export interface LyricExperience {
+  publicationNote: string;
+  listeningGuide: string;
+  movements: LyricMovement[];
+}
+
 export const RELEASES: Release[] = [
   {
     title: "MESMO SEM SINAL",
@@ -92,6 +103,54 @@ export const ALBUM_TRACKLIST: Track[] = [
   { title: "O Som da Vida", duration: "3:19", trackId: "75LUic2q4K5QBeGHAq49mf", albumTitle: "O Som da Vida" },
   { title: "MESMO SEM SINAL", duration: "4:44", trackId: "7CCthOC76Vihl2aRICkFdI", albumTitle: "MESMO SEM SINAL" },
 ];
+
+export const trackSlug = (track: Track) =>
+  track.title
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+const DEFAULT_LYRIC_EXPERIENCE: LyricExperience = {
+  publicationNote:
+    "A transcrição oficial desta faixa ainda está em preparação. O arquivo só publicará versos revisados e aprovados pela Aurantis.",
+  listeningGuide:
+    "Ouça a dinâmica: o espaço íntimo do verso, a urgência que se aproxima e o refrão onde a travessia se abre.",
+  movements: [
+    { title: "O Vazio", description: "O ponto de partida: voz próxima, espaço e tensão antes da ruptura." },
+    { title: "A Tempestade", description: "A urgência se acumula em camadas, sem apagar a vulnerabilidade." },
+    { title: "O Farol", description: "O refrão transforma a pressão em horizonte e permanência." },
+  ],
+};
+
+const LYRIC_EXPERIENCES: Record<string, LyricExperience> = {
+  "mesmo-sem-sinal": {
+    publicationNote:
+      "A versão oficial de MESMO SEM SINAL será publicada aqui após revisão da banda. Até lá, a página preserva o mapa de escuta sem apresentar versos não aprovados como letra final.",
+    listeningGuide:
+      "Um rádio perdido no escuro procura quem escute. O silêncio aumenta a tensão até a luz insistir por dentro.",
+    movements: [
+      { title: "O rádio", description: "A transmissão começa em proximidade e procura — alguém ainda está do outro lado." },
+      { title: "O escuro", description: "A ausência de resposta vira matéria para uma urgência cada vez maior." },
+      { title: "O sinal", description: "A catarse confirma a permanência: a luz não precisa chegar de fora." },
+    ],
+  },
+  "sombras-que-ficam": {
+    publicationNote:
+      "A letra oficial de Sombras que Ficam está em preparação editorial para publicação neste arquivo.",
+    listeningGuide:
+      "Uma travessia sobre reconhecer a sombra sem permitir que ela defina o horizonte.",
+    movements: [
+      { title: "A sombra", description: "O que permanece não precisa ser escondido para ser atravessado." },
+      { title: "A ferida", description: "A canção sustenta a tensão entre memória e movimento." },
+      { title: "O horizonte", description: "O refrão abre espaço para continuar carregando a própria história." },
+    ],
+  },
+};
+
+export const getLyricExperience = (track: Track): LyricExperience =>
+  LYRIC_EXPERIENCES[trackSlug(track)] ?? DEFAULT_LYRIC_EXPERIENCE;
 
 export const PLAYLISTS = [
   {
