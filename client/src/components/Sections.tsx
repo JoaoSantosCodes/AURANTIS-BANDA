@@ -1,6 +1,6 @@
 /**
  * Estilo: "Neon sobre Ruínas" — letreiros Oswald, vigas de ferro,
- * gold glow em hover, metadados mono uppercase, entradas reveal on scroll.
+ * ouro gasto, cidade noturna e a narrativa da reconstrução sem promessas fáceis.
  */
 import { useEffect, useState } from "react";
 import { ARTIST, ASSETS } from "@/lib/bandData";
@@ -15,11 +15,11 @@ export function Header() {
   }, []);
 
   const links = [
-    { label: "A Banda", href: "#banda" },
+    { label: "Manifesto", href: "#banda" },
     { label: "Discografia", href: "#discografia" },
-    { label: "Setlist", href: "#setlist" },
+    { label: "Escuta", href: "#setlist" },
     { label: "Letras", href: "/letras" },
-    { label: "Novidades", href: "#novidades" },
+    { label: "Próximo Ato", href: "#novidades" },
   ];
 
   return (
@@ -102,22 +102,22 @@ export function Hero() {
             <span style={{ color: "var(--gold)" }}>tempestade</span>
           </h1>
           <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-lg reveal font-light leading-relaxed">
-            Construímos esperança a partir das ruínas — entre o Céu e o Chão,
-            com guitarras de estádio, cordas orquestrais e a voz rasgada de quem
-            atravessou o escuro.
+            A Aurantis constrói som a partir do que parece ruína: uma travessia
+            entre vulnerabilidade, tensão e horizonte, com guitarras de estádio,
+            cordas orquestrais e voz rasgada.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 reveal">
             <a
               href="#setlist"
               className="tech-meta px-6 py-3 bg-[var(--gold)] text-primary-foreground font-semibold hover:bg-[var(--gold-soft)] neon-glow active:scale-[0.97] transition-transform duration-150"
             >
-              Ouvir o Setlist
+              Entrar na Escuta
             </a>
             <a
               href="#banda"
               className="tech-meta px-6 py-3 border border-[var(--steel)] text-foreground hover:border-[var(--gold)]/70 hover:text-[var(--gold-soft)] neon-glow active:scale-[0.97] transition-transform duration-150"
             >
-              Conheça a Banda
+              Ler o Manifesto
             </a>
           </div>
         </div>
@@ -131,17 +131,17 @@ export function Manifesto() {
     {
       numeral: "I",
       title: "O Vazio",
-      text: "Os versos nascem sussurrados — guitarras limpas banhadas em shimmer reverb, delay longo e pads que respiram como o ar antes da tempestade. É a confissão, o quarto escuro, o rádio perdido no breu.",
+      text: "A canção começa perto: guitarra limpa, espaço e uma voz que não finge já ter encontrado a saída. É a confissão antes de a cidade voltar a responder.",
     },
     {
       numeral: "II",
       title: "A Tempestade",
-      text: "O pré-refrão aperta o peito: bateria crescente, urgência percussiva, a tensão acumulando como eletricidade estática no mastro de um navio prestes a afundar.",
+      text: "A urgência ganha corpo: bateria crescente, tensão percussiva e eletricidade acumulada. O que parecia silêncio começa a pedir movimento.",
     },
     {
       numeral: "III",
       title: "O Farol",
-      text: "O refrão explode em Wall of Sound — guitarras high-gain massivas, bateria de estádio e cordas orquestrais. É a catarse: a dor vira alicerce, e a ruína vira templo.",
+      text: "O refrão abre em Wall of Sound — guitarras high-gain, bateria de estádio e camadas orquestrais. A dor não desaparece: ela se torna alicerce para seguir.",
     },
   ];
 
@@ -161,9 +161,9 @@ export function Manifesto() {
             <div className="iron-beam my-8 reveal" />
             <p className="text-muted-foreground text-lg leading-relaxed reveal font-light">
               A nossa música é o ato de construir a partir das ruínas. A dor
-              nunca é o fim — é o alicerce. O caos é o palco onde a alma
-              aprende a florescer. Navegamos entre o Céu e o Chão, aceitando as
-              sombras como parte do ser.
+              não encerra a história: ela revela a matéria da reconstrução.
+              Entre o Céu e o Chão, a Aurantis acolhe a sombra, a dúvida e a
+              decisão de continuar.
             </p>
             <p className="mt-6 tech-meta reveal text-[var(--gold-soft)]">
               Para quem sente demais.
@@ -200,17 +200,17 @@ export function Philosophy() {
   const elements = [
     {
       name: "O Fogo",
-      desc: "Consuma e guie. O fogo que arde na ruína é o mesmo que ilumina o caminho.",
+      desc: "Consome e guia. O fogo não apaga a cicatriz; ilumina o que ainda pode ser construído.",
       img: ASSETS.ruinHall,
     },
     {
       name: "A Água",
-      desc: "Limpa e arrasta. A correnteza que leva o que pesava — sem apagar quem você é.",
+      desc: "Limpa e arrasta. A correnteza move o que pesava, sem apagar a história de quem atravessa.",
       img: ASSETS.emptyRoom,
     },
     {
       name: "O Horizonte",
-      desc: "O amanhã incerto, porém necessário. A linha onde o céu toca a esperança.",
+      desc: "O amanhã incerto, porém necessário. A linha que mantém o caminho aberto sem prometer atalhos.",
       img: ASSETS.ruinSilhouette,
     },
   ];
@@ -262,17 +262,16 @@ export function SpotifyCTA() {
       </div>
       <div className="container relative z-10 text-center">
         <p className="tech-meta reveal mb-4 text-[var(--gold)]">
-          O Sinal Ainda Existe
+          O sinal permanece
         </p>
         <h2 className="neon-title text-4xl md:text-6xl reveal">
-          Mesmo sem sinal,
+          Mesmo no silêncio,
           <br />
           ainda há música
         </h2>
         <p className="mt-6 text-muted-foreground max-w-xl mx-auto reveal font-light">
-          Siga a Aurantis no Spotify e seja o primeiro a saber dos próximos
-          lançamentos. O próximo movimento da trilogia está sendo construído
-          agora.
+          Siga a Aurantis no Spotify para acompanhar o catálogo e os próximos
+          movimentos quando eles estiverem prontos para atravessar a cidade.
         </p>
         <a
           href={ARTIST.spotifyUrl}

@@ -6,7 +6,9 @@ Site oficial da banda **Aurantis** — Rock Cinematográfico Alternativo brasile
 
 ## Visão Geral
 
-Site one-page construído com **React 19 + Vite 7 + Tailwind CSS 4**, na estética "Neon sobre Ruínas": fundo azul-noite, letreiros neon dourados, textura de estática analógica e tipografia de cartaz de show.
+Site one-page construído com **React 19 + Vite 7 + Tailwind CSS 4**, na estética **Neon sobre Ruínas**: azul-noite, letreiros em ouro gasto, textura de estática analógica e tipografia de cartaz industrial. A narrativa pública trabalha a **Arquitetura do Renascimento**: construir a partir da ruína, atravessar a tensão e manter o horizonte aberto.
+
+> A luz mora dentro da tempestade — e o sinal continua sem antecipar o que ainda não foi aprovado.
 
 ## Estrutura
 
@@ -22,17 +24,18 @@ client/
     │   ├── Sections.tsx      # Header, Hero, Manifesto, Philosophy, SpotifyCTA, Footer
     │   ├── Discografia.tsx   # Releases oficiais com capas do Spotify
     │   ├── Setlist.tsx       # Top 5 faixas + players embutidos
-    │   └── Novidades.tsx     # Teaser "Fogos de Santelmo"
+    │   ├── Novidades.tsx     # Estado seguro do próximo ato, sem anúncio prematuro
+    │   └── SignalPlayer.tsx  # Player “O Sinal” com Spotify iFrame API
     └── lib/bandData.ts # Dados centrais (releases, tracklist, assets)
 ```
 
 ## Conteúdo do site
 
-- **Hero** — letreiro neon AURANTIS em rooftop noturno
-- **Manifesto em 3 atos** — O Vazio → A Tempestade → O Farol
-- **Setlist** — 5 faixas mais ouvidas do Spotify + player de *MESMO SEM SINAL*
-- **Discografia** — capas oficiais de todas as releases (embeds do Spotify)
-- **Novidades** — teaser do próximo lançamento "Fogos de Santelmo"
+- **Hero e manifesto** — Arquitetura do Renascimento em três movimentos: O Vazio → A Tempestade → O Farol.
+- **Escuta** — setlist, links de faixa e player “O Sinal” baseado no embed oficial do Spotify.
+- **Discografia** — catálogo oficial com capas e links diretos para escuta.
+- **Letras interativas** — rota `/letras` preparada para versões aprovadas, sem exibir versos não validados.
+- **Próximo ato** — estado editorial de construção; títulos, datas, letras e assets não aprovados não são publicados.
 
 ## Desenvolvimento local
 
@@ -74,4 +77,4 @@ vercel --prod # deploy de produção
 
 ## Nota
 
-As imagens do site (hero, logos, capas de álbum) são servidas pelo Manus Storage em produção no preview. Ao fazer deploy no Vercel, baixe as imagens de `client/src/lib/bandData.ts` e sirva-as localmente (ex.: `client/public/images/`) se desejar independência total do armazenamento externo.
+Os dados de catálogo e os links do Spotify ficam centralizados em `client/src/lib/bandData.ts`. Antes de adicionar qualquer lançamento, valide título, data, capa, link e copy. Letras sincronizadas só podem ser ativadas quando houver letra final aprovada, áudio master autorizado para o site e timecodes revisados.

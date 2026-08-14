@@ -1,7 +1,6 @@
 /**
- * Estilo: "Neon sobre Ruínas" — teaser da próxima composição como um
- * "cartaz de show em construção": neon aceso sobre andaime,
- * estática de rádio, glow dourado, tech-meta.
+ * Estilo: "Neon sobre Ruínas" — transmissão em construção: andaime, estática
+ * de rádio e ouro gasto, sem anunciar título, data ou letra não aprovados.
  */
 export function Novidades() {
   return (
@@ -10,34 +9,32 @@ export function Novidades() {
         <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
           <div>
             <p className="tech-meta reveal mb-4 text-[var(--gold)]">
-              Próximo Ato · Em Construção
+              Transmissão · Em Construção
             </p>
             <h2 className="neon-title reveal text-4xl md:text-6xl leading-tight">
-              Fogos de
+              O próximo ato
               <br />
-              Santelmo
+              ainda se forma
             </h2>
             <div className="iron-beam reveal my-8" />
             <p className="reveal text-muted-foreground text-lg font-light leading-relaxed max-w-xl">
-              Fogos de Santelmo é o fenômeno elétrico que incendeia os mastros
-              dos navios no auge da tempestade — uma luz que os marinheiros
-              antigos tomavam por sinal dos santos. A luz que só aparece quando
-              o caos está completo.
+              A Aurantis está construindo uma nova travessia. Quando o título,
+              a escuta e os visuais estiverem prontos, o sinal chegará inteiro —
+              sem antecipar o que ainda precisa ganhar forma.
             </p>
             <p className="reveal mt-6 text-foreground/90 font-light leading-relaxed max-w-xl">
-              É o terceiro movimento da trilogia: da luz apagada de{" "}
-              <em>Static Saints</em> e do sinal que resiste no silêncio de{" "}
-              <em>Santos Estáticos</em>, para a luz que nasce{" "}
+              Por enquanto, a direção permanece clara: transformar ruína em
+              movimento e deixar a luz nascer{" "}
               <strong style={{ color: "var(--gold-soft)" }}>
                 dentro da tempestade
               </strong>
-              .
+              , sem reduzir a travessia a uma promessa fácil.
             </p>
             <blockquote className="reveal mt-10 border-l-2 border-[var(--gold)] pl-6 py-1">
               <p className="neon-title text-2xl md:text-3xl leading-snug">
-                “Eu vi a luz — e ela morava
+                “O sinal ainda existe.
                 <br />
-                dentro da tempestade.”
+                A transmissão continua.”
               </p>
             </blockquote>
           </div>
@@ -45,7 +42,7 @@ export function Novidades() {
           <div className="reveal relative">
             <div className="border border-[var(--gold)]/40 bg-card p-8 md:p-10 text-center">
               <p className="tech-meta text-[var(--gold)] mb-6">
-                Em Breve · Nova Era
+                Estado de transmissão
               </p>
               {/* Estática de rádio visual */}
               <div className="relative h-40 flex items-center justify-center overflow-hidden bg-background mb-8 border border-border">
@@ -61,8 +58,9 @@ export function Novidades() {
                 </p>
               </div>
               <p className="text-muted-foreground font-light leading-relaxed mb-8">
-                A produção está em andamento. Wall of Sound, cordas
-                orquestrais e o grito catártico que a tempestade pede.
+                O próximo movimento só será anunciado depois da aprovação de
+                título, data, assets e comunicação. Até lá, o catálogo atual
+                permanece no ar.
               </p>
               <a
                 href="https://open.spotify.com/artist/719ElQJLLJysKblHHEoWSM"

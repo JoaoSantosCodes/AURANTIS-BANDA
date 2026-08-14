@@ -1,7 +1,7 @@
 /**
- * AURANTIS — Dados oficiais da banda (fonte: perfil Spotify oficial)
- * Estilo do site: "Neon sobre Ruínas" — azul-noite + ouro neon.
- * Todos os IDs/URLs reais do Spotify para embeds e links.
+ * AURANTIS — Dados confirmados para o site público.
+ * Estilo: "Neon sobre Ruínas" — catálogo verificável, escuta no Spotify e
+ * estados editoriais claros para qualquer conteúdo ainda em preparação.
  */
 
 export const ARTIST = {
@@ -48,7 +48,7 @@ export const RELEASES: Release[] = [
     albumId: "151drFn5YBWuw8sMkgo9nJ",
     coverUrl: "/images/mesmo-sem-sinal.jpeg",
     description:
-      "O lançamento que define a era. Como um rádio perdido no escuro, tentando alguém pra escutar — a luz que resiste mesmo quando o mundo apaga as estrelas.",
+      "Um rádio procura frequência no escuro. MESMO SEM SINAL transforma ausência de resposta em permanência — a luz que insiste por dentro.",
     featured: true,
   },
   {
@@ -58,7 +58,7 @@ export const RELEASES: Release[] = [
     albumId: "7aHvd0sMlgLKsoe3W6Bk7Z",
     coverUrl: "/images/ecos-do-amanha.jpeg",
     description:
-      "O álbum de estreia — 14 faixas sobre o amanhã incerto, porém necessário. A trilha sonora para encarar as tempestades da vida.",
+      "O álbum de estreia abre um horizonte incerto, porém necessário: canções sobre sombra, correnteza, tempo e a decisão de seguir.",
   },
   {
     title: "A Luz da Cruz",

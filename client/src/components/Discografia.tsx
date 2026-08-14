@@ -1,6 +1,6 @@
 /**
- * Estilo: "Neon sobre Ruínas" — cards de release com capas oficiais do Spotify,
- * grid assimétrico (destaque largo à esquerda), iron-beam, tech-meta, glow hover.
+ * Estilo: "Neon sobre Ruínas" — catálogo como cartografia aberta da travessia;
+ * capas oficiais, grade assimétrica e navegação direta para o Spotify.
  */
 import { ASSETS, RELEASES } from "@/lib/bandData";
 
@@ -25,14 +25,14 @@ export function Discografia() {
           <div>
             <p className="tech-meta mb-4 text-[var(--gold)]">Discografia</p>
             <h2 className="neon-title text-4xl md:text-6xl leading-tight">
-              A Trilogia do
+              Cartografia da
               <br />
-              Sinal
+              Travessia
             </h2>
           </div>
           <p className="tech-meta hidden md:block text-right max-w-xs text-muted-foreground">
-            Da luz apagada ao sinal que resiste — cada release é um ato da
-            mesma construção.
+            Cada release registra uma parte da travessia: sombra, tensão,
+            permanência e horizonte, sem antecipar os próximos capítulos.
           </p>
         </div>
 
