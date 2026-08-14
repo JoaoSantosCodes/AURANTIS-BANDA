@@ -1,8 +1,6 @@
 {
-  "framework": "vite",
-  "buildCommand": "pnpm run build",
+  "buildCommand": "pnpm vercel-build",
   "outputDirectory": "client/dist",
-  "devCommand": "pnpm run dev",
   "installCommand": "pnpm install",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }

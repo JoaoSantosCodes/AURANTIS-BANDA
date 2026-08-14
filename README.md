@@ -51,8 +51,7 @@ O projeto já está configurado para o Vercel (`vercel.json` no repositório):
 1. Acesse [vercel.com/new](https://vercel.com/new)
 2. Importe o repositório `AURANTIS-BANDA`
 3. O Vercel detecta o `vercel.json` e configura automaticamente:
-   - **Framework Preset:** Vite
-   - **Build Command:** `pnpm run build`
+   - **Build Command:** `pnpm vercel-build` (script que roda o Vite com a config limpa `vite.config.vercel.ts`, sem plugins do ambiente Manus)
    - **Output Directory:** `client/dist`
 4. Clique em **Deploy**
 
