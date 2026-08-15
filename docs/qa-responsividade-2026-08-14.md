@@ -29,6 +29,10 @@ O hero foi ajustado para reduzir o letreiro em telas estreitas e reforçar a lei
 | Perfil oficial da Aurantis no Spotify | HTTP 200 |
 | Faixa `MESMO SEM SINAL` no Spotify | HTTP 200 |
 
-Os links e assets essenciais verificados não apresentam quebra. A publicação da correção no endereço público depende do envio do commit ao repositório e do redeploy conectado ao Vercel.
+Os links e assets essenciais verificados não apresentam quebra. A publicação da correção no endereço público dependia do envio do commit ao repositório e do redeploy conectado ao Vercel.
 
 As cinco âncoras da navegação principal — `#topo`, `#banda`, `#discografia`, `#setlist` e `#novidades` — também foram confirmadas no DOM da página inicial.
+
+## Confirmação pública
+
+A versão pública em `https://aurantis-banda-coral.vercel.app/` foi aberta após o envio do commit `8d450b7` e já exibe o hero com a nova frase editorial. A inspeção no navegador confirma a presença de navegação, CTAs, setlist, player O Sinal, rota de letras e links oficiais do Spotify. Uma captura headless isolada em largura mobile não carregou o documento e gerou uma imagem vazia; ela não foi tratada como falha visual. A validação mobile de conteúdo foi realizada na prévia local, onde o letreiro corrigido permaneceu dentro de `375 × 812`.
