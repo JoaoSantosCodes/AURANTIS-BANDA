@@ -202,6 +202,13 @@
     color: oklch(0.62 0.04 250);
   }
 
+  /* Console de O Sinal: grade discreta, sem competir com o embed oficial. */
+  .signal-console {
+    background-image:
+      linear-gradient(oklch(0.12 0.02 250 / 88%), oklch(0.12 0.02 250 / 88%)),
+      repeating-linear-gradient(90deg, transparent 0, transparent 23px, oklch(0.78 0.13 80 / 6%) 24px);
+  }
+
   /* Grain estático sobre a página */
   .grain::after {
     content: "";

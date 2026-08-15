@@ -29,6 +29,14 @@ export function Setlist() {
               <span style={{ color: "var(--gold)" }}>tremer</span>
             </h2>
 
+            <div className="reveal mb-8 border-y border-[var(--gold)]/25 py-4">
+              <p className="tech-meta text-[var(--gold)]">Ritual de escuta</p>
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+                Comece por uma faixa, atravesse a transmissão em O Sinal e siga
+                para a discografia quando o horizonte pedir mais espaço.
+              </p>
+            </div>
+
             <ol className="space-y-0 border-t border-border">
               {top5.map((t) => (
                 <li key={t.trackId}>

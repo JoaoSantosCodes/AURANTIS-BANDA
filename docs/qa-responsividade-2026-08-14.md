@@ -36,3 +36,7 @@ As cinco âncoras da navegação principal — `#topo`, `#banda`, `#discografia`
 ## Confirmação pública
 
 A versão pública em `https://aurantis-banda-coral.vercel.app/` foi aberta após o envio do commit `8d450b7` e já exibe o hero com a nova frase editorial. A inspeção no navegador confirma a presença de navegação, CTAs, setlist, player O Sinal, rota de letras e links oficiais do Spotify. Uma captura headless isolada em largura mobile não carregou o documento e gerou uma imagem vazia; ela não foi tratada como falha visual. A validação mobile de conteúdo foi realizada na prévia local, onde o letreiro corrigido permaneceu dentro de `375 × 812`.
+
+## Revalidação pública
+
+Uma nova inspeção da versão pública confirmou novamente as cinco âncoras principais, a rota de letras, o perfil oficial da Aurantis no Spotify e o link da faixa focal de O Sinal. Em uma moldura de `375 px`, o documento retornou `scrollWidth` de `360 px`, sem transbordamento horizontal; os 31 links da página foram carregados nessa largura. Não foram encontrados links essenciais quebrados ou uma nova falha de responsividade nesta revalidação.

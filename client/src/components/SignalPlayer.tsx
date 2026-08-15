@@ -51,10 +51,13 @@ export function SignalPlayer() {
     ALBUM_TRACKLIST[0];
   const [activeTrack, setActiveTrack] = useState<Track>(defaultTrack);
   const visibleTracks = ALBUM_TRACKLIST.slice(0, 8);
+  const activePosition = visibleTracks.findIndex(
+    (track) => track.trackId === activeTrack.trackId,
+  );
 
   return (
     <section
-      className="reveal border border-[var(--gold)]/55 bg-card/70 p-4 md:p-5"
+      className="signal-console reveal border border-[var(--gold)]/55 bg-card/70 p-4 md:p-5"
       aria-label="O Sinal — player personalizado da Aurantis"
     >
       <div className="flex items-start justify-between gap-5 border-b border-[var(--gold)]/25 pb-4">
@@ -64,10 +67,21 @@ export function SignalPlayer() {
           </span>
           <div className="min-w-0">
             <p className="tech-meta text-[var(--gold)]">O Sinal</p>
-            <p className="mt-1 truncate font-medium text-foreground">{activeTrack.title}</p>
+            <p className="mt-1 truncate font-medium text-foreground" aria-live="polite">
+              {activeTrack.title}
+            </p>
           </div>
         </div>
-        <span className="tech-meta shrink-0 text-[10px] text-[var(--gold-soft)]">ON AIR</span>
+        <span className="tech-meta shrink-0 text-[10px] text-[var(--gold-soft)]">
+          ON AIR
+        </span>
+      </div>
+
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-l-2 border-[var(--gold)]/70 bg-background/45 px-3 py-2">
+        <p className="tech-meta text-[10px] text-[var(--gold-soft)]">
+          transmissão {String(Math.max(activePosition + 1, 1)).padStart(2, "0")} / {String(visibleTracks.length).padStart(2, "0")}
+        </p>
+        <p className="text-xs text-muted-foreground">Escolha → escute → aprofunde</p>
       </div>
 
       <div className="mt-4 border border-border bg-background/60 p-1">
@@ -86,7 +100,7 @@ export function SignalPlayer() {
 
       <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end">
         <p className="text-sm leading-relaxed text-muted-foreground">
-          Selecione uma faixa para trocar a transmissão. A reprodução segue pelo player oficial do Spotify.
+          Selecione uma faixa para trocar a transmissão. A reprodução permanece no player oficial do Spotify.
         </p>
         <a
           href={`/letras?faixa=${trackSlug(activeTrack)}`}
@@ -97,7 +111,7 @@ export function SignalPlayer() {
         </a>
       </div>
 
-      <div className="mt-5">
+      <nav className="mt-5" aria-label="Faixas disponíveis em O Sinal">
         <p className="tech-meta mb-2 text-[10px] text-muted-foreground">Selecionar transmissão</p>
         <div className="border-b border-border">
           {visibleTracks.map((track) => (
@@ -109,7 +123,7 @@ export function SignalPlayer() {
             />
           ))}
         </div>
-      </div>
+      </nav>
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-4">
         <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
@@ -125,6 +139,12 @@ export function SignalPlayer() {
           Abrir no Spotify <ExternalLink size={14} aria-hidden="true" />
         </a>
       </div>
+      <a
+        href="#discografia"
+        className="mt-3 inline-flex text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground underline decoration-[var(--gold)]/50 underline-offset-4 transition-colors duration-200 hover:text-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)]"
+      >
+        Continuar pela cartografia completa
+      </a>
       <p className="mt-4 inline-flex items-center gap-2 text-[11px] text-muted-foreground">
         <Sparkles size={13} className="text-[var(--gold)]" aria-hidden="true" />
         Letras oficiais interativas em preparação.
