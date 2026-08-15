@@ -34,14 +34,19 @@ export default function Lyrics() {
         <section className="relative overflow-hidden border-y border-border bg-card/35 py-14 md:py-20">
           <div className="container grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
             <div>
-              <p className="tech-meta text-[var(--gold)]">Arquivo de Letras</p>
+              <a
+                href="/#o-sinal"
+                className="tech-meta inline-flex items-center gap-2 text-[var(--gold)] hover:text-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)]"
+              >
+                <Radio size={14} aria-hidden="true" /> Voltar para O Sinal
+              </a>
               <h1 className="neon-title mt-4 text-5xl leading-[.95] md:text-7xl">
                 Escute com<br />
                 <span className="text-[var(--gold)]">os olhos abertos.</span>
               </h1>
             </div>
             <div className="border-l-2 border-[var(--gold)] pl-5 text-base leading-relaxed text-muted-foreground">
-              A letra é uma camada da travessia. O arquivo será preenchido exclusivamente com versões aprovadas pela banda, preservando cada pausa, corte e cicatriz.
+              A letra é uma camada da travessia. Este arquivo recebe somente versões aprovadas pela banda, preservando cada pausa, corte e cicatriz.
             </div>
           </div>
         </section>

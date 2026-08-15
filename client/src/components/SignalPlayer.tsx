@@ -100,14 +100,14 @@ export function SignalPlayer() {
 
       <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end">
         <p className="text-sm leading-relaxed text-muted-foreground">
-          Selecione uma faixa para trocar a transmissão. A reprodução permanece no player oficial do Spotify.
+          Escolha uma faixa na lista abaixo. O player oficial muda junto; depois, abra no Spotify ou siga pela cartografia.
         </p>
         <a
           href={`/letras?faixa=${trackSlug(activeTrack)}`}
           className="inline-flex items-center justify-center gap-2 border border-[var(--gold)]/65 px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-[var(--gold-soft)] transition-colors duration-200 hover:bg-[var(--gold)]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)]"
         >
           <Captions size={15} aria-hidden="true" />
-          Letras
+          Ver letras
         </a>
       </div>
 
@@ -143,7 +143,7 @@ export function SignalPlayer() {
         href="#discografia"
         className="mt-3 inline-flex text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground underline decoration-[var(--gold)]/50 underline-offset-4 transition-colors duration-200 hover:text-[var(--gold-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)]"
       >
-        Continuar pela cartografia completa
+        Explorar toda a discografia
       </a>
       <p className="mt-4 inline-flex items-center gap-2 text-[11px] text-muted-foreground">
         <Sparkles size={13} className="text-[var(--gold)]" aria-hidden="true" />

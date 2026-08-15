@@ -12,12 +12,13 @@ export function Setlist() {
 
   return (
     <section id="setlist" className="relative py-28 md:py-36">
+      <span id="o-sinal" className="absolute -top-20" aria-hidden="true" />
       <div className="container">
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
           {/* Coluna do setlist */}
-          <div>
+          <div className="order-2 lg:order-1">
             <p className="tech-meta reveal mb-4 text-[var(--gold)]">
-              O Setlist — Mais Ouvidas
+              Depois da transmissão
             </p>
             <h2 className="neon-title reveal text-4xl md:text-6xl leading-tight mb-10">
               As 5 que
@@ -32,8 +33,8 @@ export function Setlist() {
             <div className="reveal mb-8 border-y border-[var(--gold)]/25 py-4">
               <p className="tech-meta text-[var(--gold)]">Ritual de escuta</p>
               <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
-                Comece por uma faixa, atravesse a transmissão em O Sinal e siga
-                para a discografia quando o horizonte pedir mais espaço.
+                Comece em O Sinal. Depois da transmissão, estas faixas abrem
+                novos caminhos pela cartografia da Aurantis.
               </p>
             </div>
 
@@ -67,7 +68,7 @@ export function Setlist() {
           </div>
 
           {/* Coluna do player personalizado + faixa completa */}
-          <div className="lg:sticky lg:top-28 space-y-8">
+          <div className="order-1 lg:order-2 lg:sticky lg:top-28 space-y-8">
             <SignalPlayer />
 
             <div className="reveal">

@@ -8,6 +8,7 @@ import { toast } from "sonner";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const onHome = window.location.pathname === "/";
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -15,11 +16,11 @@ export function Header() {
   }, []);
 
   const links = [
-    { label: "Manifesto", href: "#banda" },
-    { label: "Discografia", href: "#discografia" },
-    { label: "Escuta", href: "#setlist" },
+    { label: "Manifesto", href: onHome ? "#banda" : "/#banda" },
+    { label: "O Sinal", href: onHome ? "#o-sinal" : "/#o-sinal" },
+    { label: "Discografia", href: onHome ? "#discografia" : "/#discografia" },
     { label: "Letras", href: "/letras" },
-    { label: "Próximo Ato", href: "#novidades" },
+    { label: "Próximo Ato", href: onHome ? "#novidades" : "/#novidades" },
   ];
 
   return (
@@ -31,7 +32,7 @@ export function Header() {
       }`}
     >
       <div className="container flex items-center justify-between h-16">
-        <a href="#topo" className="flex items-center gap-3">
+        <a href={onHome ? "#topo" : "/#topo"} className="flex items-center gap-3">
           <img
             src={ASSETS.logo}
             alt="Aurantis — mastro com fogo de Santelmo"
@@ -64,12 +65,10 @@ export function Header() {
           </a>
         </nav>
         <a
-          href={ARTIST.spotifyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={onHome ? "#o-sinal" : "/#o-sinal"}
           className="md:hidden tech-meta text-[var(--gold-soft)]"
         >
-          Spotify
+          O Sinal
         </a>
       </div>
     </header>
@@ -108,10 +107,10 @@ export function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap gap-4 reveal">
             <a
-              href="#setlist"
+              href="#o-sinal"
               className="tech-meta px-6 py-3 bg-[var(--gold)] text-primary-foreground font-semibold hover:bg-[var(--gold-soft)] neon-glow active:scale-[0.97] transition-transform duration-150"
             >
-              Entrar na Escuta
+              Ouvir O Sinal
             </a>
             <a
               href="#banda"
