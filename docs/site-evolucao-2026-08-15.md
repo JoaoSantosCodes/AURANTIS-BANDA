@@ -19,3 +19,7 @@ Esta rodada preserva a reprodução oficial do Spotify, o catálogo, a rota de l
 ## Conferência visual inicial
 
 A prévia em 375 px preservou a leitura integral do letreiro principal e o contraste do hero, sem corte das palavras. A seção de escuta foi conferida na navegação local com os controles de faixa, CTA de Spotify e atalho para a cartografia presentes. A validação final deve repetir esses critérios após o envio ao repositório e o redeploy.
+
+## Validação pública
+
+A versão hospedada recebeu a evolução após o envio da `main`. A página pública exibe o bloco **Ritual de escuta**, o estado `transmissão 01 / 08`, o caminho “Escolha → escute → aprofunde” e o atalho para a cartografia, mantendo o player oficial do Spotify e a rota de letras disponíveis.
