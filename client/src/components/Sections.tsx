@@ -91,17 +91,17 @@ export function Hero() {
 
       <div className="container relative z-10 pb-24 md:pb-32 pt-32">
         <div className="max-w-2xl">
-          <p className="tech-meta reveal mb-6 text-[var(--gold)]">
+          <p className="tech-meta reveal mb-6 text-[var(--gold-soft)]">
             Rock Cinematográfico Alternativo · Brasil
           </p>
-          <h1 className="neon-title neon-flicker text-6xl sm:text-7xl lg:text-8xl leading-[0.95] reveal">
+          <h1 className="neon-title neon-flicker text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-[0.01em] sm:tracking-[0.02em] reveal">
             A luz mora
             <br />
             dentro da
             <br />
             <span style={{ color: "var(--gold)" }}>tempestade</span>
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-lg reveal font-light leading-relaxed">
+          <p className="mt-8 text-lg md:text-xl text-foreground/85 max-w-lg reveal font-light leading-relaxed">
             A Aurantis constrói som a partir do que parece ruína: uma travessia
             entre vulnerabilidade, tensão e horizonte, com guitarras de estádio,
             cordas orquestrais e voz rasgada.
@@ -115,7 +115,7 @@ export function Hero() {
             </a>
             <a
               href="#banda"
-              className="tech-meta px-6 py-3 border border-[var(--steel)] text-foreground hover:border-[var(--gold)]/70 hover:text-[var(--gold-soft)] neon-glow active:scale-[0.97] transition-transform duration-150"
+              className="tech-meta px-6 py-3 border border-[var(--gold)]/65 bg-background/35 text-[var(--gold-soft)] hover:border-[var(--gold)] hover:bg-[var(--gold)]/10 neon-glow active:scale-[0.97] transition-transform duration-150"
             >
               Ler o Manifesto
             </a>
